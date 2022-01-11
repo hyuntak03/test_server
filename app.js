@@ -19,5 +19,6 @@ app.get('/', function(req, res) { // '/' 위치에 'get'요청을 받는 경우,
   res.send(rows); // "Hello World!"를 보냅니다.
 });
 
-app.listen(8080, function(){ 
+var port = process.env.PORT || 3000;
+app.listen(port, function(){ 
 });
