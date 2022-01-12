@@ -26,7 +26,7 @@ app.use((req, res, next) => {
   next();
 })
 
-app.get('/data', function(req, res) {
+app.get('/data', function(req, res) { 
   res.send(rows);
 });
 
