@@ -13,7 +13,7 @@ const rows = [
     { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
 ];
 
-app.get('/data', function(req, res) { 
+app.get('/', function(req, res) { 
   res.send(rows);
 });
 
