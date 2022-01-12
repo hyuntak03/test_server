@@ -13,8 +13,6 @@ const rows = [
     { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
 ];
 
-// console.log(rows[0])
-
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*")
   res.header(
@@ -28,8 +26,8 @@ app.use((req, res, next) => {
   next();
 })
 
-app.get('/', function(req, res) { // '/' 위치에 'get'요청을 받는 경우,
-  res.send(rows); // "Hello World!"를 보냅니다.
+app.get('/data', function(req, res) {
+  res.send(rows);
 });
 
 var port = process.env.PORT || 3000;
