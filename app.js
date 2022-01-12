@@ -15,6 +15,19 @@ const rows = [
 
 // console.log(rows[0])
 
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*")
+  res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  );
+  if (req.method === 'OPTIONS') {
+      res.header('Access-Control-Allow-Methods', 'PUT, POST, PATCH, DELETE, GET');
+      return res.status(200).json({});
+  }
+  next();
+})
+
 app.get('/', function(req, res) { // '/' 위치에 'get'요청을 받는 경우,
   res.send(rows); // "Hello World!"를 보냅니다.
 });
