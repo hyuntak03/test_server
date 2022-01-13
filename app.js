@@ -13,6 +13,10 @@ const data = [
     { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
 ];
 
+app.get('/', function(req, res) {
+  res.send('test_server');
+})
+
 app.get('/data', function(req, res) { 
   res.send(data);
 });
