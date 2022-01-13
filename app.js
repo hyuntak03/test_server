@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 
-const rows = [
+const data = [
     { id: 1, lastName: 'Snow', firstName: 'Jon', age: 35 },
     { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
     { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
@@ -14,7 +14,7 @@ const rows = [
 ];
 
 app.get('/data', function(req, res) { 
-  res.send(rows);
+  res.send(data);
 });
 
 var port = process.env.PORT || 3000;
